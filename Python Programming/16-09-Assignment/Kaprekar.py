@@ -35,7 +35,7 @@ def kaprekarRec(n, prev):
     # we have reached kaprekar's constant  
     if (diff == prev):  
         return diff;  
-  #o/p in all cases 6174
+  
     # Else recur  
     return kaprekarRec(diff, prev);  
   
@@ -43,4 +43,5 @@ def kaprekarRec(n, prev):
 def kaprekar(n):  
   
     rev = 0;  
-    return kaprekarRec(n, rev);  
+    return kaprekarRec(n, rev); 
+  #o/p in all cases 6174
