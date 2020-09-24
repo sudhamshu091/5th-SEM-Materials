@@ -26,3 +26,10 @@ passed = filter(filter_func, marks)
 
 for x in passed:
   print("Passed with Marks:",a,x)
+
+#Output:
+#Average of the class : <function <lambda> at 0x0111F580>
+#Passed with Marks: <map object at 0x01119190> 50
+#Passed with Marks: <map object at 0x01119190> 37
+#Passed with Marks: <map object at 0x01119190> 28
+#Passed with Marks: <map object at 0x01119190> 32
