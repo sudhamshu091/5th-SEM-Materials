@@ -1,5 +1,5 @@
 
-module dff_test;
+module dff_tb;
 reg d, clk,reset;
 wire q, q_n;
 
