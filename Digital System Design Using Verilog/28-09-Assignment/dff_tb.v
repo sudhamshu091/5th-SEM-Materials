@@ -3,7 +3,7 @@ module dff_test;
 reg d, clk,reset;
 wire q, q_n;
 
-dff_n test(.q(q), .q_n(q_n), .clear(reset), .d(d), .clk(clk)); 
+dff_tb test(.q(q), .q_n(q_n), .clear(reset), .d(d), .clk(clk)); 
 
 $display("time = %g, clk = %b, d = %b,reset = %b, q = %b, q_n = %b", $time, clk, d, reset, q, q_n);
 
