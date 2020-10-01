@@ -1,0 +1,13 @@
+clc; clear all; close all;
+t = [0:0.001:0.1];
+f = input('Enter the input frequency: ');
+x1=sin(2*pi*f*t);
+figure(1);
+plot(t,x1,'b'); xlabel('time'); ylabel('amplitude');
+title(' First signal ');
+grid on;
+t = [0:0.0001:0.2];
+x2=sin(2*pi*f*t);
+figure(2);
+plot(t,x2,'r*'); xlabel('time'); ylabel('amplitude');
+title('Second signal');
