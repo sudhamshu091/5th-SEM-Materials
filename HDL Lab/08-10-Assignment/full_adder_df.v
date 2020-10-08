@@ -6,7 +6,7 @@ assign cout = (a&b)|(b&cin)|(a&cin);
 endmodule
 
 `timescale 1ns / 1ps
-module top;
+module fulladder_tb;
 reg  a,b,cin;
 wire sum, cout;  
 fulladder adder(.a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
