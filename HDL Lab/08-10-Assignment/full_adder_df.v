@@ -15,7 +15,7 @@ fulladder adder(.a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
  #100; 
  
  a =1;
- b <=0;
+ b =0;
  cin =0;
  #10;
  a =0;
