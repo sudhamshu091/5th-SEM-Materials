@@ -3,7 +3,7 @@ ENTITY full_adder IS             --- Full Adder
 PORT(A,B,Cin: IN bit ;
   S, Cout : OUT bit);
 END full_adder;
-ARCHITECTURE full_adder_beh OF full_adder IS
+ARCHITECTURE full_adder_df OF full_adder IS
 BEGIN
   PROCESS(A,B,Cin)                -- Sensitive on all the three bits
     VARIABLE temp :bit;
@@ -12,7 +12,7 @@ BEGIN
        S <= temp XOR Cin;
        Cout <= (A AND B) OR (temp AND Cin);
      END PROCESS ;
-END full_adder_beh; 
+END full_adder_df; 
 
  
 --Test Bench
