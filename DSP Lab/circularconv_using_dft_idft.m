@@ -1,0 +1,11 @@
+clc; close all; clear all;
+x=input('enter the first sequence=');
+h=input('enter the second sequence=');
+ l=max(length(x),length(h));
+ xk=fft(x,l);
+ hk=fft(h,l);
+ y=ifft(xk.*hk);
+ disp(y);
+subplot(3,1,1); stem(x,'filled');
+subplot(3,1,2); stem(h,'filled');
+subplot(3,1,3); stem(y,'filled'); 
