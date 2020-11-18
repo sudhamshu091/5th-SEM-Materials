@@ -1,0 +1,16 @@
+clc; clear all; close all;
+disp('FIR filter design using Kaiser window');
+M = input ('Enter the length of the filter = ');
+beta= input ('Enter the value of beta = ');
+wc = input ('Enter the digital cutoff frequency = ');
+wn= kaiser(M,beta);
+disp('FIR Kaiser window coefficients:');
+disp(wn);
+hn = fir1(M-1, wc, wn);
+disp('The unit sample response of FIR filter is hn=');
+disp(hn);
+freqz(hn,1,512);
+grid on;
+xlabel('Normalized frequency');
+ylabel('Gain in db');
+title('Freq response of FIR filter'); 
