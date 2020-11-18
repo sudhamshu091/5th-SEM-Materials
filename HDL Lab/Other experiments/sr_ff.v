@@ -1,4 +1,3 @@
-
 module sr_ff(s,r, clk, q);
 input s,r,clk;
 output q;
@@ -14,7 +13,8 @@ case (sr)
 default:q=1'BZ;
 endcase
 end
-endmodule
+endmodule
+
 
 module sr_ff_tb;
 reg s,r, clk;
@@ -34,4 +34,5 @@ initial begin
  #100;  s= 1; r=1; 
 end 
 endmodule
-
+
+
