@@ -22,8 +22,6 @@ wire q, qb;
 
 initial
   begin
-    $dumpfile("dump.vcd");
-    $dumpvars(1);
     j=1'b1;
     k=1'b1; #10
     j=1'b0; 
