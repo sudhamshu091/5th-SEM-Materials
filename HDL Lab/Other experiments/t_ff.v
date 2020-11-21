@@ -4,7 +4,7 @@ output q, qb;
 reg q, qb;
 always @(posedge clk)
 begin
-q<=1'b0; qb<=1'b1;
+q=1'b0; qb=1'b1;
 if (t==1'B0)
 begin
 q = q; qb = qb;
