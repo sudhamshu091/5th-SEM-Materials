@@ -43,3 +43,47 @@ begin
  holdc=holda;
 end
 endmodule
+
+
+module serialadder_tb;
+reg clk,rst,pload,enable;
+reg [7:0] adata,bdata;
+wire [7:0]pout;
+serialadder Dut(clk,rst,pload,adata,bdata,enable,pout);
+always #5 clk = ~clk;
+
+initial begin
+clk = 1'b0;
+rst = 1'b1;
+pload = 1'b0;
+enable = 1'b0;
+#10;
+rst =1'b0;
+#10;
+pload = 1'b1; enable = 1'b0;
+$display ($time,"On Reset : adata = %0h,bdata = %0h,pout = %0h",adata,bdata,pout);
+adata = 8'd1; bdata = 8'd2;
+$display ($time ,"First Data - Data input loaded: adata = %0h,bdata = %0h,pout = %0h",adata,bdata,pout);
+#10
+pload = 1'b0; enable = 1'b1;
+#200
+$display ($time, "First Data Serial addition completed");
+pload = 1'b0; enable = 1'b1;
+#200
+$display($time, "First Data Serial addition completed : adata = %0h , bdata = %0h, pout = %0h", adata , bdata , pout);
+rst = 1'b0;
+#10
+pload = 1'b1; enable = 1'b0;
+adata = 8'd2; bdata = 8'd3;
+#10
+$display ($time, "Second Data - Data input loaded: adata = %0h , bdata = %0h, pout = %0h", adata , bdata , pout);
+pload = 1'b0; enable = 1'b1;
+#200
+$display($time, "Second Data Serial addition completed : adata = %0h , bdata = %0h, pout = %0h", adata , bdata , pout);
+pload = 1'b0; enable = 1'b1;
+#200
+$display($time, "Second Data Serial addition completed : adata = %0h , bdata = %0h, pout = %0h", adata , bdata , pout);
+$finish;
+
+end 
+endmodule
