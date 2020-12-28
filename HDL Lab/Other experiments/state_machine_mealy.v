@@ -1,4 +1,4 @@
-module state_machine_melay(clk, reset, in, out);
+module state_machine_mealy(clk, reset, in, out);
 parameter zero=0, one1=1, two1s=2;
 output out; input clk, reset, in;
 reg out; reg [1:0] state, next_state;
@@ -44,12 +44,12 @@ always @(state) begin
 end
 endmodule
 
-module state_machine_melay_tb();
+module state_machine_mealy_tb();
 reg clk, reset, in;
 wire out;
 integer i;
 
-state_machine_melay dut(clk, reset, in, out);
+state_machine_mealy dut(clk, reset, in, out);
 initial 
 forever #5 clk = ~clk;
 
