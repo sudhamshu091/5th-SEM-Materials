@@ -1,0 +1,172 @@
+Discussions:
+
+
+Regular Expressions are developed Based applications by using python module : re
+
+import re
+
+
+
+Compile()
+
+re module contains compile() function to compile a pattern into RegexObject.
+Example: pattern= re.compile ("python")
+
+
+finditer()
+Returns an Iterator object which yields Match object for every Match
+matcher=pattern.finditer(" programmin in python")
+
+On Match object we can call the following methods:
+
+start()-start index of the match
+end()- end+1 indes of match
+group()-: returns matched stringis
+
+
+
+pattern=re.compile("ab")
+matcher=pattern.finditer("abcababa")
+
+
+
+
+#Example programs
+
+# program 1
+import re
+pattern=re.compile("ab")
+count=0
+matcher=pattern.finditer("abcababa")
+for i in matcher:
+    count+=1
+    print("match is available at start index: ", i.start())
+print("the no of occurances: ", count)
+
+
+
+# program 2
+import re
+count=0
+pattern=re.compile("ab")
+matcher=pattern.finditer("abcababa")
+for m in matcher:
+    count+=1
+    print("start:{},  end:{}, group:{} ".format(m.start(), m.end(), m.group()))
+print("the no of occurances: ", count)
+
+
+
+# program 3
+
+import re
+count=0
+#pattern=re.compile("ab")
+#matcher=pattern.finditer("abcababa")
+matcher=re.finditer("ab","abcababa")
+for m in matcher:
+    count+=1
+    print("start:{},  end:{}, group:{} ".format(m.start(), m.end(), m.group()))
+print("the no of occurances: ", count)
+
+
+
+
+
+Character classes:
+
+ character classes can be used to search a group of characters
+1. [abc]	----Either a or b or c
+2. [^abc] 	----Except a and b and c
+3. [a-z]	----Any Lower case alphabet symbol
+4. [A-Z]	----Any upper case alphabet symbol
+5. [a-zA-Z]	----Any alphabet symbol
+6. [0-9]	---- Any digit from 0 to 9
+7. [a-zA-Z0-9]	----Any alphanumeric character
+8. [^a-zA-Z0-9]	----Except alphanumeric characters(Special Characters)
+
+
+# program 4
+
+import re
+matcher=re.finditer("[0-9]","a6B@ k9z")
+for i in matcher:
+    print(i.start(), '----',i.group())
+
+
+
+
+Pre defined Character classes:
+\s -- Space character
+\S -- Any character except space character
+\d -- Any digit from 0 to 9
+\D -- Any character except digit
+\w -- Any word character [a-zA-Z0-9]
+\W -- Any character except word character (Special Characters)
+.  -- Any character including special characters
+
+
+
+import re
+matcher=re.finditer("\d","a6B@ k9z")
+for i in matcher:
+    print(i.start(), '----',i.group())
+
+
+
+
+
+Qunatifiers:
+We can use quantifiers to specify the number of occurrences to match.
+a 	-- Exactly one 'a'
+a+ 	-- Atleast one 'a'
+a* 	-- Any number of a's including zero number
+a? 	-- Atmost one 'a' ie either zero  or one number
+a{m} 	-- Exactly m number of a's
+a{m,n} 	-- Minimum m number of a's and Maximum n number of a's
+
+^a 	-- It will check whether target string starts with a or not
+	We can use ^ symbol to check whether the given target string starts with our provided pattern ornot.
+a$ 	-- It will check whether target string ends with a or not
+	We can use $ symbol to check whether the given target string ends with our provided pattern or not
+
+
+
+Important functions
+
+finditer()
+Returns the iterator yielding a match object for each match.On each match object we can call start(), end() and group() functions.
+
+match()
+We can use match function to check the given pattern at beginning of target string.If the match is available then we will get Match object, otherwise we will get None.
+
+
+fullmatch()
+We can use fullmatch() function to match a pattern to all of target string. i.e complete stringshould be matched according to given pattern.If complete string matched then this function returns Match object otherwise it returns None.
+
+
+search()
+We can use search() function to search the given pattern in the target string. If the match is available then it returns the Match object which represents first occurrence of the match. If the match is not available then it returns None
+
+
+findall()
+To find all occurrences of the match.This function returns a list object which contains all occurrences.
+
+
+sub()
+sub means substitution or replacement.
+re.sub(regex,replacement,targetstring)
+In the target string every matched pattern will be replaced with provided replacement.
+
+
+subn()
+It is exactly same as sub except it can also returns the number of replacements. This function returns a tuple where first element is result string and second element is number of replacements.
+(resultstring, number of replacements)
+
+
+split()
+If we want to split the given target string according to a particular pattern then we should go for split() function.This function returns list of all tokens.
+
+compile()
+re module contains compile() function to compile a pattern into RegexObject.
+
