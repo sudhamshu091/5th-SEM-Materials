@@ -1,3 +1,10 @@
+module full_adder_1bit (a, b, cin, sum, cout);
+input a, b, cin;
+output sum, cout;
+assign sum = a^b^cin;
+assign cout = (a&b)|(b&cin)|(a&cin);
+endmodule
+
 module serialadder(clk,rst,pload,adata,bdata,enable,pout);
  input clk,rst,pload,enable;
  input [7:0] adata, bdata;
