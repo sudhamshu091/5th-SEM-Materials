@@ -13,4 +13,4 @@ freqz(hn,1,512);
 grid on;
 xlabel('Normalized frequency');
 ylabel('Gain in db');
-title('Frequency response of FIR filter'); 
+title('Freq response of FIR filter'); 
