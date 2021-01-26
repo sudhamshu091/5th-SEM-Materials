@@ -14,7 +14,6 @@ module tb_logicgates;
   //Inputs
   reg a;
   reg b;
-
   //Outputs
   wire [6:0] y;
 
@@ -34,4 +33,4 @@ module tb_logicgates;
 
   always @(y)
     $display("Time =%0t \ Input values: \t  a =%b b =%b \t y = %b ",$time,a,b,y);
-endmodule
+endmodule
