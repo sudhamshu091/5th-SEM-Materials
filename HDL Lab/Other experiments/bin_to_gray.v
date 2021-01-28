@@ -36,5 +36,4 @@ module bin_to_gray_tb();
         #100;   
       $stop;
    end
-
 endmodule
