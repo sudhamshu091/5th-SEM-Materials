@@ -17,7 +17,7 @@ module bin_to_gray_tb();
 
    always
    begin        
-          G <= 0; #10;
+         G <= 0; #10;
         G <= 1;   #10;
         G <= 2;   #10;
         G <= 3;   #10;
