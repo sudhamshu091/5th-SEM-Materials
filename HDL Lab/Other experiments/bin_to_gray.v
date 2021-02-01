@@ -13,8 +13,6 @@ module bin_to_gray_tb();
     wire [3:0] B;
     
    bin_to_gray uut(G,B);
-    
-
    always
    begin        
         G <= 0; #10;
