@@ -1,4 +1,4 @@
-clc; clear all; close all;
+clc; clear all; close all; 
 Wc = 0.25*pi;
 Wc = Wc /pi;
 N=5;
