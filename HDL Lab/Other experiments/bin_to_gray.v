@@ -1,4 +1,4 @@
-module bin_to_gray(B,G) ;
+module bin_to_gray(B,G);
 input [3:0] B;
 output [3:0] G;
 assign G[0] = B[1]^B[0];
