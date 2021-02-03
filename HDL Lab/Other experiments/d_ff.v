@@ -1,5 +1,5 @@
 module dff(d, rst, clk, q, qb);
- input d, rst, clk; 
+input d, rst, clk; 
 output q, qb; reg q, qb; 
 always @(posedge clk) 
 begin 
