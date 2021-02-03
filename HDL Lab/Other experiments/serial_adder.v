@@ -23,8 +23,8 @@ begin
  shiftrega=8'd0;
  shiftregb=8'd0;
  shiftregc=8'd0;
- end else 
- if(pload) begin
+ end else if(pload)
+ begin
  shiftrega=adata;
  shiftregb=bdata;
  shiftregc=8'b0;
