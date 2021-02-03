@@ -1,6 +1,6 @@
 module jkff(jk, clk, q, qb);
 input clk;
-input [1:0]jk;
+input [1:0]j,k;
 output q,qb;
 reg q,qb;
 reg clk1;
@@ -12,6 +12,7 @@ clk1<=div[22];
 end
 always @(posedge clk1)
 begin
+assign jk = {j,k};
 case(jk)
 2'b00:q=q;
 2'b01:q=1'b0;
