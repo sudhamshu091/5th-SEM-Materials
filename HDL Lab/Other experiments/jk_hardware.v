@@ -4,7 +4,7 @@ input [1:0]j,k;
 output q,qb;
 reg q,qb;
 reg clk1;
-reg[22:0] div
+reg[22:0] div;
 always @(posedge clk)
 begin
 div<=div+1’b1;
