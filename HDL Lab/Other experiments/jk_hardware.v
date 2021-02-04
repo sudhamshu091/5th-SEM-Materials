@@ -1,4 +1,4 @@
-module jkff(jk, clk, q, qb);
+module jkff(j,k, clk, q, qb);
 input clk;
 input [1:0]j,k;
 output q,qb;
