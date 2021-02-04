@@ -49,10 +49,6 @@ integer i;
       
       a = 3'd4;
       b = 3'd5;
-     
-
-
-
-      
+ 
     end
 endmodule
