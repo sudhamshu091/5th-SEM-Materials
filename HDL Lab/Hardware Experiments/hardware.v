@@ -1,4 +1,4 @@
-module tff(t,clk,q,qb)
+module tff(t,clk,q,qb);
 input t,clk;
 output q,qb;
 reg q,qb;
