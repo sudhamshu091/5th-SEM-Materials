@@ -1,4 +1,4 @@
-clc; clear all; close all;
+clc; clear all;close all;
 disp('FIR filter design using Kaiser window');
 M = input ('Enter the length of the filter = ');
 beta= input ('Enter the value of beta = ');
