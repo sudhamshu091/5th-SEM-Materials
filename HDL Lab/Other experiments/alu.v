@@ -1,7 +1,7 @@
 module alu (a, b, code, aluout);
 input [3:0] a, b;
 input [2:0] code;
-output [7:0] aluout ;
+output [7:0] aluout;
 reg [7:0] aluout ;
 wire[7:0] x, y;
 assign x = {4'B0000, a};
