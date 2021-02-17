@@ -1,4 +1,4 @@
-module alu (a, b, code, aluout);
+module alu (a, b, code, aluout );
 input [3:0] a, b;
 input [2:0] code;
 output [7:0] aluout;
